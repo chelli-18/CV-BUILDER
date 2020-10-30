@@ -23,8 +23,9 @@ $row=mysqli_fetch_assoc($result);
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <style media="screen">
       .parent{
-        width:600px;
         position: relative;
+        padding:10px;
+        width:600px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -66,12 +67,12 @@ $row=mysqli_fetch_assoc($result);
       <img src="images/<?php echo $row["image"]; ?>"  width="350" alt="">
     </div>
     <div class="contactinfo">
-      <p><?php echo $row['NAME']?></p>
-      <p><?php echo $row['CONTACTNO']?></p>
-      <p><?php echo $row['EMAIL']?></p>
+      <h3><?php echo $row['NAME']?></h3>
+      <p><b><?php echo $row['CONTACTNO']?></b></p>
+      <p><b><?php echo $row['EMAIL']?></b></p>
     </div>
     <div class="personalprofile">
-      <p>Personal profile</p>
+      <p><b>Personal profile</b></p>
       <p><?php echo $row['profession']?></p>
       <p><?php echo $row['GENDER']?></p>
       <p><?php echo $row['DATEOFBIRTH']?></p>
@@ -80,57 +81,57 @@ $row=mysqli_fetch_assoc($result);
       <p><?php echo $row['NATIONALITY']?></p>
     </div>
     <div class="education">
-      <p>eductaion history</p>
+      <p><b>EDUCATION HISTORY</b></p>
       <p><?php echo $row['PG_NAMEOFINSTITUTE']?></p>
       <p><?php echo $row['pgnoc']?></p>
-      <p>year of passing:<?php echo $row['PG_YEAROFPASSING']?></p>
-      <p><?php echo $row['PG_PERCENTAGE']?>%</p>
+      <p>Year of passing:<?php echo $row['PG_YEAROFPASSING']?></p>
+      <p>Percentage :<?php echo $row['PG_PERCENTAGE']?>%</p>
       <p><?php echo $row['G_NAMEOFINSTITUTE']?></p>
       <p><?php echo $row['gnoc']?></p>
-      <p>year of passing:<?php echo $row['G_YEAROFPASSING']?></p>
-      <p><?php echo $row['G_PERCENTAGE']?>%</p>
+      <p>Year of passing:<?php echo $row['G_YEAROFPASSING']?></p>
+      <p>Percentage :<?php echo $row['G_PERCENTAGE']?>%</p>
       <p><?php echo $row['HS_NAMEOFINSTITUTE']?></p>
       <p>year of passing:<?php echo $row['HS_YEAROFPASSING']?></p>
-      <p><?php echo $row['HS_PERCENTAGE']?></p>
+      <p>Percentage :<?php echo $row['HS_PERCENTAGE']?>%</p>
       <p><?php echo $row['SSC_NAMEOFINSTITUTE']?></p>
       <p>year of passing:<?php echo $row['SSC_YEAROFPASSING']?></p>
-      <p><?php echo $row['SSC_PERCENTAGE']?>%</p>
+      <p>Percentage<?php echo $row['SSC_PERCENTAGE']?>%</p>
     </div>
     <?php
       if($row['TS_LANGUAGESKNOWN']!=""||$row['TS_CONCEPTS']!=""){
       ?>
       <div  class="skills">
-        <p>areas of expertise</p>
-        <p><?php echo $row['TS_LANGUAGESKNOWN']?></p>
-        <p><?php echo $row['TS_CONCEPTS']?></p>
-        <p><?php echo $row['areaofinterest']?></p>
+        <p><b>AREA OF EXPERTISE</b></p>
+        <p>Languages Known : <?php echo $row['TS_LANGUAGESKNOWN']?></p>
+        <p>Concepts Known : <?php echo $row['TS_CONCEPTS']?></p>
+        <p>Area of Interest : <?php echo $row['areaofinterest']?></p>
       </div>
     <?php
       }
      ?>
     <div class="work">
-      <p>work experience</p>
+      <p><b>WORK EXPERIENCE</b></p>
       <p><?php echo $row['COMPANYNAME_1']?></p>
       <p><?php echo $row['WORKDONE_1']?></p>
       <p><?php echo $row['COMPANYNAME_2']?></p>
       <p><?php echo $row['WORKDONE_2']?></p>
     </div>
     <div class="project">
-      <p>project expertise</p>
+      <p><b>PROJECT EXPERTISE</b></p>
       <p><?php echo $row['PROJECTNAME1']?></p>
       <p><?php echo $row['WORKDONE_P1']?></p>
       <p><?php echo $row['PROJECTNAME2']?></p>
       <p><?php echo $row['WORKDONE_P2']?></p>
     </div>
     <div class="achieve">
-      <p>ACHIEVEMENTS</p>
+      <p><b>ACHIEVEMENTS</b></p>
       <p><?php echo $row['ACHIEVEMENTS']?></p>
     </div>
     <div class="other">
-      <p>others</p>
-      <p><?php echo $row['LANGUAGESKNOWN']?></p>
+      <p><b>OTHERS</b></p>
+      <p>Languages known:<?php echo $row['LANGUAGESKNOWN']?></p>
       <p>Hobbies :<?php echo $row['INTEREST']?></p>
-      <p><?php echo $row['ref']?></p>
+      <p>Reference:<?php echo $row['ref']?></p>
     </div>
     </div>
 </body>
