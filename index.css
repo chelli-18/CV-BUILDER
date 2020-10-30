@@ -1,0 +1,11 @@
+.form{
+  width: 800px;
+  border:1px solid grey;
+  padding: 20px;
+}
+h1{
+ color:black;
+ text-align: center;
+ border-color: white;
+ padding: 20px;
+}
