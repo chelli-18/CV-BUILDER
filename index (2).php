@@ -93,7 +93,7 @@ $interest=$_POST['interest'];
 $ref=$_POST['ref'];
 
 $sql ="INSERT INTO table1(image,NAME,DATEOFBIRTH,profession,GENDER,NATIONALITY,MARTIALSTATUS,EMAIL,CONTACTNO,ADDRESS,PG_NAMEOFINSTITUTE,pgnoc,PG_YEAROFPASSING,PG_PERCENTAGE,G_NAMEOFINSTITUTE,gnoc,G_YEAROFPASSING,G_PERCENTAGE,HS_NAMEOFINSTITUTE,HS_YEAROFPASSING,HS_PERCENTAGE,SSC_NAMEOFINSTITUTE,SSC_YEAROFPASSING,SSC_PERCENTAGE,TS_LANGUAGESKNOWN,TS_CONCEPTS,areaofinterest,COMPANYNAME_1,WORKDONE_1,COMPANYNAME_2,WORKDONE_2,PROJECTNAME1,WORKDONE_P1,PROJECTNAME2,WORKDONE_P2,ACHIEVEMENTS,LANGUAGESKNOWN,INTEREST,ref)
-values('$uni','$name','$profession','$dob','$gender','$nationality','$marriage','$email','$phone','$address','$pgi','$pgnoc','$pgyear','$pgper','$gi','$gnoc','$giyear','$giper','$hi','$hiyear','$hiper','$si','$siyear','$siper','$plang','$pconcepts','$paoi','$c1','$w1','$c2','$w2','$p1','$pd1','$p2','$pd2','$achieve','$lang','$interest','$ref')";
+values('$uni','$name','$dob','$profession','$gender','$nationality','$marriage','$email','$phone','$address','$pgi','$pgnoc','$pgyear','$pgper','$gi','$gnoc','$giyear','$giper','$hi','$hiyear','$hiper','$si','$siyear','$siper','$plang','$pconcepts','$paoi','$c1','$w1','$c2','$w2','$p1','$pd1','$p2','$pd2','$achieve','$lang','$interest','$ref')";
 if(mysqli_query($conn,$sql)){
   move_uploaded_file($imgtemp,$fd);
   header("location:selection.php");
